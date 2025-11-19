@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,7 +17,7 @@ const DetailRow = ({
     valueClass 
     }: { 
     label: string, 
-    value: string | JSX.Element,
+    value: string | React.ReactNode,
     valueClass?: string 
     }) => (
     <div className="flex justify-between items-start text-sm py-0.5"> 
@@ -29,7 +30,7 @@ const DetailRow = ({
 
 const StatusBadge = ({ status }: { status: SubmissionStatus }) => {
     let classes = "px-3 py-1 rounded-full text-xs font-medium";
-    let text = status;
+    const text = status;
 
     if (status === 'Sedang Divalidasi') {
         classes += " bg-cyan-100 text-cyan-600 dark:bg-cyan-900 dark:text-cyan-300";
@@ -76,7 +77,7 @@ export default function RefundPage() {
     return (
         <div className="min-h-screen max-w-lg mx-auto bg-background">
             
-            <RefundHeader />
+            <RefundHeader /> 
             
             <main className="p-4 space-y-6">
                 <section className="space-y-2 text-center">
