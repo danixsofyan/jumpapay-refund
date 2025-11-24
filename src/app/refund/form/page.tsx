@@ -66,7 +66,7 @@ export default function RefundFormPage() {
                 </h1>
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                     <div>
-                        <Label htmlFor="nominal-awal" className="text-sm font-medium space-y-4 mb-2">Nominal Awal</Label>
+                        <Label htmlFor="nominal-awal" className="text-sm font-medium space-y-4 mb-2">Nominal PKB & denda pajak awal</Label>
                         <input 
                             id="nominal-awal"
                             value="Rp1.200.000"
@@ -76,7 +76,7 @@ export default function RefundFormPage() {
                         />
                     </div>
                     <div>
-                        <Label htmlFor="nominal-aktual" className="text-sm font-medium mb-2">Nominal Aktual</Label>
+                        <Label htmlFor="nominal-aktual" className="text-sm font-medium mb-2">Nominal PKB & denda pajak aktual</Label>
                         <input 
                             id="nominal-aktual"
                             placeholder="Isi nominal aktual di sini"
